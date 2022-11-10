@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(245, 245, 245);
+}
+
+.dflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.grid3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+@media screen and (max-width: 991px) {
+    .grid3{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 768px) {
+    .grid3{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

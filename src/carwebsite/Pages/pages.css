@@ -1,0 +1,350 @@
+.about{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 40px 8.5%;
+    background-color: #1a1a1a;
+}
+
+.about .about-left h1{
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about .about-left p{
+    font-size: 20px;
+    margin-top: 37px;
+    color: #b3b3b3;
+}
+
+.about .about-left button{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 43px;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #f1a40e;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.about .about-right{
+    display: flex;
+    gap: 24px;
+}
+
+.about-right .first-side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+.man1, .man2, .man3{
+    overflow: hidden;
+    position: relative;
+}
+
+.man1:hover .opacity, .man2:hover .opacity, .man3:hover .opacity{
+    top: 0;
+}
+
+.about .opacity{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.about .man1{
+    width: 306px;
+    height: 297px;
+}
+
+.about .man2{
+    width: 260px;
+    height: 297px;
+}
+
+.about .man3{
+    width: 286px;
+    height: 618px;
+}
+
+.man1 img, .man2 img, .man3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.man1:hover img, .man2:hover img, .man3:hover img{
+    transform: scale(1.1);
+}
+
+@media (max-width: 1300px){
+    .about{
+        padding: 40px 5%;
+    }
+    .about .about-left h1 {
+        font-size: 30px;
+    }
+    .about .about-left p {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1024px){
+    .about{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px){
+    .about .about-right{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about .man1, .about .man2, .about .man3{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 8.5%;
+    gap: 20px;
+}
+.services .car{
+    width: 360px;
+    padding: 5px 10px;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.services .car .carImg{
+    width: 100%;
+    position: relative;
+}
+.car .opacitycar{
+    position: absolute;
+    width: 0;
+    height: 98%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+.car:hover .opacitycar{
+    width: 100%;
+    opacity: 1;
+}
+
+.carImg img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.car .forPosition{
+    position: relative;
+    height: 40px;
+}
+
+.car .forIcon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: -40px;
+}
+
+.car .forIcon img{
+    width: 60px;
+    height: 60px;
+}
+
+.car .content{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.car .content h3{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.car .content p{
+    font-size: 16px;
+    color: #717171;
+    margin-bottom: 40px;
+}
+
+.car button{
+    padding: 13px 26px;
+    background-color: #f1a40e;
+    color: #fff;
+    position: relative;
+    bottom: -15px;
+    left: 33%;
+}
+
+.car button::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.car:hover button::after{
+    width: 100%;
+}
+button span{
+    color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+@media (max-width: 1200px){
+    .services{
+        flex-wrap: wrap;
+        padding: 30px 2%;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 400px){
+    .services .car{
+        width: 250px;
+    }
+
+    .car button{
+        left: 20%;
+    }
+}
+
+.contact img{
+    width: 100%;
+}
+
+.contact .contactSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    gap: 50px;
+}
+
+.contact .left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form input, form textarea{
+    width: 100%;
+    padding: 13px 23px;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    outline: none;
+    border-radius: 5px;
+}
+
+.contact textarea{
+    height: 100px;
+    resize: none;
+}
+
+.contact label{
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact input{
+    margin-bottom: 20px;
+}
+
+.contact iframe{
+    width: 500px;
+    height: 400px;
+}
+
+.contact h3{
+    font-size: 40px;
+}
+
+.contact p{
+    font-size: 20px;
+}
+
+.contact button{
+    padding: 13px 23px;
+    background-color: #f1a40e;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+@media (max-width: 1200px){
+    .contact .contactSide{
+        padding: 30px 5%;
+    }
+}
+@media (max-width: 991px){
+    .contact .contactSide{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 576px){
+    .contact iframe{
+        width: 100%;
+        height: 100%;
+    }
+}

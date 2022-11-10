@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 15px 10%;
+    background-color: #fff;
+}
+.fixed{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    margin-bottom: 100px;
+    z-index: 100;
+    top: 0;
+}
+.header-logo h2{
+    color: goldenrod;
+    font-style: italic;
+}
+
+
+.header-list ul{
+    gap: 20px;
+}
+
+.header-list ul li a{
+    transition: all 0.4s ease;
+}
+
+.header-list ul li:hover a{
+    color: goldenrod;
+}
+
+.header-account img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.openProfile{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    top: 80px;
+    right: 10px;
+    z-index: 10;
+    padding-bottom: 0;
+}
+
+.openProfile .image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.image .text h4{
+    font-size: 16px;
+    color: goldenrod;
+    margin-bottom: 2px;
+}
+
+.image .text p{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.box, .box-link{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.box{
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+.box:hover{
+    background-color: rgb(221, 221, 221);
+    transform: translateX(-10px);
+}
+
+.header .menu{
+    display: none;
+}
+
+.header-list .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 24px;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .header .header-list{
+        position: fixed;
+        width: 80%;
+        height: 90vh;
+        top: 0;
+        left: -100%;
+        background-color: #fff;
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        transition: all 0.4s ease;
+    }
+    .left0{
+        left: 0% !important;
+    }
+    .header-list ul{
+        flex-direction: column;
+        height: 100%;
+    }
+    .header-list .close{
+        display: block;
+        cursor: pointer;
+    }
+    .header .menu{
+        display: block;
+        cursor: pointer;
+    }
+}

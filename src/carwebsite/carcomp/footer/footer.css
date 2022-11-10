@@ -1,0 +1,51 @@
+footer{
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container p{
+    color: goldenrod;
+    margin-bottom: 20px;
+}
+
+.container .icon{
+    font-size: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.icon:nth-child(1):hover{
+    color: rgb(52, 52, 255);
+}
+
+.icon:nth-child(2):hover{
+    color: rgb(229, 58, 58);
+}
+
+.icon:nth-child(3):hover{
+    color: rgb(93, 93, 214);
+}
+
+.icon:nth-child(4):hover{
+    color: rgb(9, 9, 250);
+}
+
+.container .icon:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 568px) {
+    .container p{
+        text-align: center;
+        padding: 0 20px;
+        font-size: 13px;
+    }
+}

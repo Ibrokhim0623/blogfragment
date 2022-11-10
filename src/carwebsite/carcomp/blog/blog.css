@@ -1,0 +1,53 @@
+.blogCard{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.blogCard img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.blogCard .content{
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    color: aliceblue;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.content h4{
+    color: goldenrod;
+    margin-bottom: 10px;
+}
+
+.blogCard::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+.slick-next {
+    right: 25px !important;
+}
+.slick-prev {
+    left: 25px !important;
+    z-index: 10;
+}
+
+@media screen and (max-width: 568px) {
+    .slick-prev {
+        left: 5px !important;
+    }
+    .slick-next {
+        right: 5px !important;
+    }
+}
